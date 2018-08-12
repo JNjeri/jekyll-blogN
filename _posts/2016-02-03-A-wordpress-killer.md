@@ -3,6 +3,7 @@ layout: post
 title: "A wordpress killer"
 description: "This expains how a word press turns out to be a killer"
 author: "Joyce Njeri"
+coverImg: "post-sample-image.jpg"
 ---
 
 

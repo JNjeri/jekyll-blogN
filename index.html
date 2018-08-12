@@ -1,7 +1,11 @@
 ---
 layout: default
-title: "Homepage"
+title: "Joyce homepage"
+navigationName: "homepage"
+description: "Start boostrap with a clean blog theme with Jekyll"
 group: "Navigation"
+coverImg: "home-bg.jpg"
+order: 1
 ---
 
     <!-- Main Content -->
@@ -39,7 +43,7 @@ group: "Navigation"
                     <hr>
                 
                 {% endfor%}
-                
+
                 {% for post in site.posts%}
                     <div class="post-preview">
                         <a href="{{ post.url }}">

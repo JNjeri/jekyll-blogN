@@ -5,10 +5,10 @@
 
 	    {%  endif %} 
 	    <li>
-	    	<a href="{{node.url}}" class="selected">{{node.title}}</a>
+	    	<a href="{{node.url}}" class="selected">{{node.navigationName}}</a>
 	    </li>
 	    {% else %}
-	    	<a href="{{node.url}}">{{node.title}}</a></li>
+	    	<a href="{{node.url}}">{{node.navigationName}}</a></li>
 	{%  endif %}
 
 {% endfor%}
