@@ -14,7 +14,7 @@ order: 1
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {% for post in site.posts%}
                     <div class="post-preview">
-                        <a href="{{ post.url }}">
+                        <a href="{{ post.url | prepend: site.url}}">
                             <h2 class="post-title">
                                 {{ post.title }}
                             </h2>
@@ -60,11 +60,20 @@ order: 1
                 
                 {% endfor%}
                 <!-- Pager -->
+                {% if paginator.total_page > 1%}
                 <ul class="pager">
+                    {% if paginator.next_pages%}
                     <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
+                        <a href="{{ paginator.next_page_path | prepend: site.url |replace:'//', '/' }}">Older Posts &rarr;</a>
                     </li>
+                    {% endif %}
+                    {% if paginator.previous_pages%}
+                    <li class="previous">
+                        <a href="{{ paginator.previous_page_path | prepend: site.url |replace:'//', '/' }}"> &larr; prev Posts </a>
+                    </li>
+                    {% endif %}
                 </ul>
+                {% endif %}
             </div>
         </div>
     </div>
